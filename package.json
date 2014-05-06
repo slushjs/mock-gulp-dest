@@ -1,0 +1,34 @@
+{
+  "name": "mock-gulp-dest",
+  "version": "0.1.0",
+  "description": "Mock gulp.dest/vinyl-fs.dest for testing purposes. Useful when writing slush generators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klei/mock-gulp-dest"
+  },
+  "keywords": [
+    "gulp",
+    "mock",
+    "vinyl",
+    "slush",
+    "test"
+  ],
+  "author": "Joakim Bengtson <joakim@klei.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klei/mock-gulp-dest/issues"
+  },
+  "homepage": "https://github.com/klei/mock-gulp-dest",
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.18.2",
+    "vinyl": "~0.2.3"
+  },
+  "dependencies": {
+    "through2": "~0.4.1"
+  }
+}

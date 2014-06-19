@@ -51,7 +51,7 @@ module.exports = exports = function mockGulpDest (gulpOrVinylFs) {
       var files = filesFromTree(filePath);
       files.forEach(function (filePath) {
         assert.ok(cache.some(function (file) {
-          return file.relative === filePath;
+          return file.relative === path.normalize(filePath);
         }), 'Expected `' + info.base + '` to contain `' + filePath + '`');
       });
     },
@@ -59,7 +59,7 @@ module.exports = exports = function mockGulpDest (gulpOrVinylFs) {
       var files = filesFromTree(filePath);
       files.forEach(function (filePath) {
         assert.ok(cache.every(function (file) {
-          return file.relative !== filePath;
+          return file.relative !== path.normalize(filePath);
         }), 'Expected `' + info.base + '` to not contain `' + filePath + '`');
       });
     }

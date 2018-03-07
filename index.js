@@ -62,6 +62,9 @@ module.exports = exports = function mockGulpDest (gulpOrVinylFs) {
           return file.relative !== path.normalize(filePath);
         }), 'Expected `' + info.base + '` to not contain `' + filePath + '`');
       });
+    },
+    reset: function reset () {
+      cache = [];
     }
   };
 };
